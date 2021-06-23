@@ -12,3 +12,4 @@ services:
       sh -c "npm start"
     environment:
       - SECRET_KEY=supersecretkey
+      - PORT=3000
