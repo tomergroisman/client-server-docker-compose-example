@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+  server:
+    build:
+      context: server
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./server:/app
+    command: >
+      sh -c "npm start"
+    environment:
+      - SECRET_KEY=supersecretkey
