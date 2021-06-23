@@ -13,3 +13,14 @@ services:
     environment:
       - SECRET_KEY=supersecretkey
       - PORT=3000
+  
+  client:
+    build:
+      context: client
+    volumes: 
+      - ./client:/app
+    command: >
+      sh -c "npm start"
+    environment:
+      - HOST=172.21.0.1
+      - PORT=3000
